@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { VehicleRoutingModule } from './vehicle-routing.module';
-import { VehicleComponent } from './vehicle.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [
-    VehicleComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
-    VehicleRoutingModule
+    VehicleRoutingModule,
+    RouterModule.forChild([
+      {path:'',component : VehicleModule}
+    ])
   ]
 })
 export class VehicleModule { }
