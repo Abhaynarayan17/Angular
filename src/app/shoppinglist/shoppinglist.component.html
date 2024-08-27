@@ -1,0 +1,10 @@
+<div> 
+    <input type="text" data-test-id="shopping-input" [(ngModel)]="newItem" placeholder="Enter an item"> 
+    <button data-test-id="add-button" (click)="addItem()">Add Item</button> 
+    </div> 
+    
+    <ul *ngIf="shoppingList.length > 0" data-test-id="shopping-list"> 
+    <li *ngFor="let item of shoppingList; let i = index" [attr.data-test-id]="'item' + i"> 
+    {{ item }} 
+    </li> 
+    </ul> 

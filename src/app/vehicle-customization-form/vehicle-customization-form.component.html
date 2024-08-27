@@ -1,0 +1,10 @@
+<form (submit)="handleForm($event)">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="name" name="name" required />
+  
+    <label>Vehicle Model:</label>
+    <input type="text" [(ngModel)]="vehicleModel" name="vehicleModel" required />
+  
+    <button type="submit" [disabled]="!name || !vehicleModel">Submit Customization Request</button>
+  </form>
+  
